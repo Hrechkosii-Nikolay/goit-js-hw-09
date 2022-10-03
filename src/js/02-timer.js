@@ -45,6 +45,10 @@ function onStartBtnClick() {
     refs.hours.textContent = hours;
     refs.minutes.textContent = minutes;
     refs.seconds.textContent = seconds;
+
+    if (timer < 1000) {
+      clearInterval(intervalId);
+    }
   }, 1000);
 }
 
